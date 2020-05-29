@@ -1,0 +1,8 @@
+prefix=/home/cvlab/catkin_ws/devel
+
+Name: yh
+Description: Description of yh
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
