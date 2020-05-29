@@ -1,0 +1,10 @@
+[실행법]
+$roslaunch velodyne_pointcloud VLP16-points.launch
+$rivz
+$rosrun my_pcl_tutorial version0.1 input:=/velodyne_points
+
+[커밋/푸시]
+catkin_ws/src에서
+$git add .
+$git commit -m "커밋멘트"
+$git origin master
