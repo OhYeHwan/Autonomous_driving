@@ -138,8 +138,9 @@ include_directories(
 
 
 add_executable(example src/example.cpp)
+add_executable(version0.1 src/version_0.1.cpp)
 target_link_libraries(example ${catkin_LIBRARIES})
-
+target_link_libraries(version0.1 ${catkin_LIBRARIES})
 
 
 ## Rename C++ executable without prefix

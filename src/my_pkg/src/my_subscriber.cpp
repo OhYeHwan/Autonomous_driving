@@ -16,7 +16,7 @@ using namespace std;
 //   ros::NodeHandle n;
 //   ros::Subscriber sub = n.subscribe("my_topic", 1, clbk);
  
-//   ros::spin();
+//   ros::spin(
 // }
 void clbk(const my_pkg::my_msg::ConstPtr &msg) {
   ROS_INFO("%d", msg->another_field);

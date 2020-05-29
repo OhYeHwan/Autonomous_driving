@@ -118,6 +118,8 @@ add_dependencies(ros_mscl_node
   ros_mscl_gencpp
   ${${PROJECT_NAME}_EXPORTED_TARGETS}
 )
+add_executable(test_sub src/test_sub.cpp)
+
 add_executable(set_accel_bias_client src/set_accel_bias_client.cpp)
 
 add_executable(get_accel_bias_client src/get_accel_bias_client.cpp)
@@ -318,6 +320,7 @@ target_link_libraries(ros_mscl_node
   ${catkin_LIBRARIES}
 )
 
+target_link_libraries(test_sub ${catkin_LIBRARIES})
 
 target_link_libraries(set_accel_bias_client ${catkin_LIBRARIES})
 

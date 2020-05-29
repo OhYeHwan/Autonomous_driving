@@ -125,11 +125,14 @@ cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
   }
 
   cout << endl;
+
   // clock_t end = clock();
   // double time_elapsed = double(end - start);
   // cout << "Time to calculate (ms): " << time_elapsed << endl;
   // cout << "Time th calculate (s): " << time_elapsed / CLOCKS_PER_SEC << endl;
   // Publish the data
+
+  
   pub.publish (output);
 }
 

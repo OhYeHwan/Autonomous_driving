@@ -113,17 +113,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -134,6 +123,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -438,21 +438,6 @@ pcl_msgs_generate_messages_lisp/fast:
 .PHONY : pcl_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-my_pcl_tutorial/CMakeFiles/tf_generate_messages_py.dir/rule:
-	cd /home/cvlab/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_pcl_tutorial/CMakeFiles/tf_generate_messages_py.dir/rule
-.PHONY : my_pcl_tutorial/CMakeFiles/tf_generate_messages_py.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_py: my_pcl_tutorial/CMakeFiles/tf_generate_messages_py.dir/rule
-
-.PHONY : tf_generate_messages_py
-
-# fast build rule for target.
-tf_generate_messages_py/fast:
-	cd /home/cvlab/catkin_ws/build && $(MAKE) -f my_pcl_tutorial/CMakeFiles/tf_generate_messages_py.dir/build.make my_pcl_tutorial/CMakeFiles/tf_generate_messages_py.dir/build
-.PHONY : tf_generate_messages_py/fast
-
-# Convenience name for target.
 my_pcl_tutorial/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule:
 	cd /home/cvlab/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_pcl_tutorial/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
 .PHONY : my_pcl_tutorial/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
@@ -677,6 +662,36 @@ tf_generate_messages_lisp/fast:
 	cd /home/cvlab/catkin_ws/build && $(MAKE) -f my_pcl_tutorial/CMakeFiles/tf_generate_messages_lisp.dir/build.make my_pcl_tutorial/CMakeFiles/tf_generate_messages_lisp.dir/build
 .PHONY : tf_generate_messages_lisp/fast
 
+# Convenience name for target.
+my_pcl_tutorial/CMakeFiles/tf_generate_messages_py.dir/rule:
+	cd /home/cvlab/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_pcl_tutorial/CMakeFiles/tf_generate_messages_py.dir/rule
+.PHONY : my_pcl_tutorial/CMakeFiles/tf_generate_messages_py.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_py: my_pcl_tutorial/CMakeFiles/tf_generate_messages_py.dir/rule
+
+.PHONY : tf_generate_messages_py
+
+# fast build rule for target.
+tf_generate_messages_py/fast:
+	cd /home/cvlab/catkin_ws/build && $(MAKE) -f my_pcl_tutorial/CMakeFiles/tf_generate_messages_py.dir/build.make my_pcl_tutorial/CMakeFiles/tf_generate_messages_py.dir/build
+.PHONY : tf_generate_messages_py/fast
+
+# Convenience name for target.
+my_pcl_tutorial/CMakeFiles/version0.1.dir/rule:
+	cd /home/cvlab/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_pcl_tutorial/CMakeFiles/version0.1.dir/rule
+.PHONY : my_pcl_tutorial/CMakeFiles/version0.1.dir/rule
+
+# Convenience name for target.
+version0.1: my_pcl_tutorial/CMakeFiles/version0.1.dir/rule
+
+.PHONY : version0.1
+
+# fast build rule for target.
+version0.1/fast:
+	cd /home/cvlab/catkin_ws/build && $(MAKE) -f my_pcl_tutorial/CMakeFiles/version0.1.dir/build.make my_pcl_tutorial/CMakeFiles/version0.1.dir/build
+.PHONY : version0.1/fast
+
 src/example.o: src/example.cpp.o
 
 .PHONY : src/example.o
@@ -704,6 +719,33 @@ src/example.cpp.s:
 	cd /home/cvlab/catkin_ws/build && $(MAKE) -f my_pcl_tutorial/CMakeFiles/example.dir/build.make my_pcl_tutorial/CMakeFiles/example.dir/src/example.cpp.s
 .PHONY : src/example.cpp.s
 
+src/version_0.1.o: src/version_0.1.cpp.o
+
+.PHONY : src/version_0.1.o
+
+# target to build an object file
+src/version_0.1.cpp.o:
+	cd /home/cvlab/catkin_ws/build && $(MAKE) -f my_pcl_tutorial/CMakeFiles/version0.1.dir/build.make my_pcl_tutorial/CMakeFiles/version0.1.dir/src/version_0.1.cpp.o
+.PHONY : src/version_0.1.cpp.o
+
+src/version_0.1.i: src/version_0.1.cpp.i
+
+.PHONY : src/version_0.1.i
+
+# target to preprocess a source file
+src/version_0.1.cpp.i:
+	cd /home/cvlab/catkin_ws/build && $(MAKE) -f my_pcl_tutorial/CMakeFiles/version0.1.dir/build.make my_pcl_tutorial/CMakeFiles/version0.1.dir/src/version_0.1.cpp.i
+.PHONY : src/version_0.1.cpp.i
+
+src/version_0.1.s: src/version_0.1.cpp.s
+
+.PHONY : src/version_0.1.s
+
+# target to generate assembly for a file
+src/version_0.1.cpp.s:
+	cd /home/cvlab/catkin_ws/build && $(MAKE) -f my_pcl_tutorial/CMakeFiles/version0.1.dir/build.make my_pcl_tutorial/CMakeFiles/version0.1.dir/src/version_0.1.cpp.s
+.PHONY : src/version_0.1.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -715,6 +757,7 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... nodelet_generate_messages_lisp"
 	@echo "... tf_generate_messages_cpp"
 	@echo "... example"
@@ -734,7 +777,6 @@ help:
 	@echo "... pcl_msgs_generate_messages_cpp"
 	@echo "... topic_tools_generate_messages_eus"
 	@echo "... pcl_msgs_generate_messages_lisp"
-	@echo "... tf_generate_messages_py"
 	@echo "... nodelet_generate_messages_nodejs"
 	@echo "... pcl_msgs_generate_messages_nodejs"
 	@echo "... tf_generate_messages_nodejs"
@@ -750,10 +792,14 @@ help:
 	@echo "... bond_generate_messages_cpp"
 	@echo "... tf_generate_messages_eus"
 	@echo "... tf_generate_messages_lisp"
-	@echo "... edit_cache"
+	@echo "... tf_generate_messages_py"
+	@echo "... version0.1"
 	@echo "... src/example.o"
 	@echo "... src/example.i"
 	@echo "... src/example.s"
+	@echo "... src/version_0.1.o"
+	@echo "... src/version_0.1.i"
+	@echo "... src/version_0.1.s"
 .PHONY : help
 
 
